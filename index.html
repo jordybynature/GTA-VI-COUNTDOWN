@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090711">
+<meta name="description" content="A live Grand Theft Auto VI release and pre-load countdown, with official trailers, screenshots and soundtrack links.">
+<title>GTA VI — Vice City Countdown</title>
+<style>
+:root{color-scheme:dark;--pink:#ff4f9a;--cyan:#55e6ed;--violet:#a78bfa;--ink:#090711;--panel:#151122;--muted:#b8b2c8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#53245d 0,#1b1230 32%,var(--ink) 70%);color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+a{color:var(--cyan)}.wrap{width:min(1100px,92%);margin:auto}.top{padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:900;letter-spacing:.13em;color:#fff}.brand span{color:var(--pink)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;color:#ddd2ec;font-size:.9rem}
+.hero{text-align:center;padding:65px 0 45px}.eyebrow{color:var(--cyan);letter-spacing:.3em;font-size:.76rem;font-weight:800}.hero h1{font-size:clamp(3.1rem,10vw,7.8rem);line-height:.88;margin:20px 0 16px;letter-spacing:-.075em;text-shadow:0 0 38px #ff4f9a55}.hero h1 span{display:block;color:var(--pink)}.sub{color:#e5d9ed;font-size:1.05rem}.pill{display:inline-block;border:1px solid #ffffff38;border-radius:99px;padding:8px 14px;color:#f7d7ed;font-size:.8rem;margin-top:15px}
+.counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px auto 42px;max-width:850px}.count{background:linear-gradient(145deg,#241532ee,#11101df2);border:1px solid #ffffff20;border-radius:20px;padding:24px;box-shadow:0 15px 60px #0005}.count h2{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 18px}.count.release h2{color:var(--pink)}.count.preload h2{color:var(--cyan)}.digits{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.unit{background:#08071199;border-radius:12px;padding:13px 5px}.num{font-size:clamp(1.6rem,5vw,2.7rem);font-weight:900;font-variant-numeric:tabular-nums}.lbl{font-size:.65rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.note{font-size:.78rem;color:var(--muted);margin:15px 0 0}
+section{padding:42px 0}.section-head{margin-bottom:22px}.section-head small{color:var(--cyan);letter-spacing:.2em;font-weight:800}.section-head h2{font-size:clamp(1.8rem,5vw,2.8rem);margin:8px 0}.section-head p{color:var(--muted);max-width:700px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.tile{background:var(--panel);border:1px solid #ffffff1c;border-radius:16px;overflow:hidden}.tile .inside{padding:18px}.tile h3{margin:0 0 8px}.tile p{color:var(--muted);line-height:1.5;margin:0 0 12px}.tile a{font-weight:700;text-decoration:none}.video{position:relative;aspect-ratio:16/9;background:#05040a}.video iframe{width:100%;height:100%;border:0}
+.tracklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.track{background:#171323;border:1px solid #ffffff16;padding:14px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}.track b{font-size:.93rem}.track a{font-size:.78rem;white-space:nowrap;text-decoration:none;color:var(--cyan)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.shot{border-radius:14px;min-height:145px;background:linear-gradient(135deg,#361d47,#11101c);border:1px solid #ffffff20;display:flex;align-items:end;padding:15px;text-decoration:none;color:#fff;position:relative;overflow:hidden}.shot:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 20%,#ff5aa566,transparent 40%),linear-gradient(145deg,transparent,#080711aa)}.shot span{position:relative;font-weight:800}
+footer{border-top:1px solid #ffffff1a;padding:28px 0 42px;color:var(--muted);font-size:.82rem;line-height:1.6}.btn{display:inline-block;background:linear-gradient(90deg,var(--pink),#a855f7);padding:12px 18px;border-radius:99px;color:white!important;text-decoration:none;font-weight:800;margin-top:5px}
+@media(max-width:650px){.top{align-items:flex-start;flex-direction:column}.hero{padding:48px 0 25px}.counts,.grid,.tracklist{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.count{padding:18px}.digits{gap:5px}.unit{padding:10px 3px}}
+</style>
+</head>
+<body>
+<header class="wrap top"><div class="brand">VICE CITY <span>COUNTDOWN</span></div><nav><a href="#trailers">Trailers</a><a href="#screenshots">Screenshots</a><a href="#music">Music</a></nav></header>
+<main class="wrap">
+<div class="hero"><div class="eyebrow">THE WAIT IS ALMOST OVER</div><h1>GRAND THEFT <span>AUTO VI</span></h1><div class="sub">Welcome back to Leonida. Your live countdown starts here.</div><div class="pill">COUNTING DOWN TO NOVEMBER 19, 2026</div></div>
+<div class="counts">
+ <article class="count release"><h2>Game release</h2><div class="digits" id="release"></div><p class="note" id="releaseNote">19 November 2026 · Midnight UK time</p></article>
+ <article class="count preload"><h2>Pre-load begins</h2><div class="digits" id="preload"></div><p class="note" id="preloadNote">10 November 2026 · Midnight UK time</p></article>
+</div>
+<section id="trailers"><div class="section-head"><small>OFFICIAL VIDEO</small><h2>Watch the trailers</h2><p>Revisit the official Rockstar trailers while the countdown runs.</p></div>
+<div class="grid">
+ <article class="tile"><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/QdBZY2fkU-0" title="GTA VI Trailer 1" loading="lazy" allowfullscreen></iframe></div><div class="inside"><h3>Trailer 1</h3><a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></article>
+ <article class="tile"><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/VQRLujxTm3c" title="GTA VI Trailer 2" loading="lazy" allowfullscreen></iframe></div><div class="inside"><h3>Trailer 2</h3><a href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></article>
+</div></section>
+<section id="screenshots"><div class="section-head"><small>LEONIDA IN PICTURES</small><h2>Screenshots & artwork</h2><p>Open Rockstar's official media gallery for the full-resolution screenshots, artwork and video collection.</p><a class="btn" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener">Open official screenshot gallery ↗</a></div>
+<div class="gallery">
+<a class="shot" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><span>Vice City nights ↗</span></a>
+<a class="shot" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><span>Leonida coast ↗</span></a>
+<a class="shot" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><span>Lucia & Jason ↗</span></a>
+<a class="shot" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><span>Neon streets ↗</span></a>
+<a class="shot" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><span>Wildlife & wilderness ↗</span></a>
+<a class="shot" href="https://www.rockstargames.com/VI/media" target="_blank" rel="noopener"><span>Official artwork ↗</span></a>
+</div></section>
+<section id="music"><div class="section-head"><small>THE SOUND OF LEONIDA</small><h2>GTA VI music</h2><p>Listen through official pages and music services. Tracks are linked out rather than copied or hosted here.</p><a class="btn" href="https://www.rockstargames.com/VI/music/cocoteo-fm" target="_blank" rel="noopener">Rockstar's official GTA VI music page ↗</a></div>
+<div class="tracklist">
+ <div class="track"><b>Love Is a Long Road — Tom Petty</b><a href="https://open.spotify.com/search/Love%20Is%20a%20Long%20Road%20Tom%20Petty" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>Hot Together — The Pointer Sisters</b><a href="https://open.spotify.com/search/Hot%20Together%20Pointer%20Sisters" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>Pop Bottles — Birdman ft. Lil Wayne</b><a href="https://open.spotify.com/search/Pop%20Bottles%20Birdman" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>Pound Town — Sexyy Red</b><a href="https://open.spotify.com/search/Pound%20Town%20Sexyy%20Red" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>People Are People — Depeche Mode</b><a href="https://open.spotify.com/search/People%20Are%20People%20Depeche%20Mode" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>Love Bites — Def Leppard</b><a href="https://open.spotify.com/search/Love%20Bites%20Def%20Leppard" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>Against All Odds — Phil Collins</b><a href="https://open.spotify.com/search/Against%20All%20Odds%20Phil%20Collins" target="_blank" rel="noopener">Listen ↗</a></div>
+ <div class="track"><b>Flower in a Hurricane — Justice</b><a href="https://open.spotify.com/search/Flower%20in%20a%20Hurricane%20Justice" target="_blank" rel="noopener">Listen ↗</a></div>
+</div>
+<div class="section-head" style="margin-top:32px"><small>BACK TO THE 80s</small><h2>Grand Theft Auto: Vice City classics</h2><p>Find the original Vice City radio soundtrack and playlists, including Flash FM, Wave 103, Emotion 98.3, V-Rock and Fever 105.</p><a class="btn" href="https://open.spotify.com/search/Grand%20Theft%20Auto%20Vice%20City%20soundtrack" target="_blank" rel="noopener">Explore Vice City soundtrack ↗</a></div>
+</section>
+</main>
+<footer><div class="wrap">Fan-made countdown website. Grand Theft Auto, Rockstar Games and related marks belong to their respective owners. This is an unofficial fan project and is not affiliated with Rockstar Games. Countdown uses UK time (GMT) and updates automatically.</div></footer>
+<script>
+const targets={release:new Date('2026-11-19T00:00:00Z'),preload:new Date('2026-11-10T00:00:00Z')};
+const units=[['Days',86400000],['Hours',3600000],['Minutes',60000],['Seconds',1000]];
+function render(id,target){const el=document.getElementById(id),diff=target-Date.now();if(diff<=0){el.innerHTML='<div class="unit" style="grid-column:1/-1"><div class="num">IT\'S TIME</div><div class="lbl">The moment has arrived</div></div>';return}let remain=diff;el.innerHTML=units.map(([label,size])=>{const n=Math.floor(remain/size);remain%=size;return '<div class="unit"><div class="num">'+String(n).padStart(2,'0')+'</div><div class="lbl">'+label+'</div></div>'}).join('')}
+function tick(){render('release',targets.release);render('preload',targets.preload)}tick();setInterval(tick,1000);
+</script>
+</body></html>
