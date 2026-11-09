@@ -69,8 +69,8 @@ const targets={release:new Date('2026-11-19T00:00:00Z'),preload:new Date('2026-1
 const units=[['Days',86400000],['Hours',3600000],['Minutes',60000],['Seconds',1000]];
 function render(id,target){const el=document.getElementById(id),diff=target-Date.now();if(diff<=0){el.innerHTML='<div class="unit" style="grid-column:1/-1"><div class="num">IT\'S TIME</div><div class="lbl">The moment has arrived</div></div>';return}let remain=diff;el.innerHTML=units.map(([label,size])=>{const n=Math.floor(remain/size);remain%=size;return '<div class="unit"><div class="num">'+String(n).padStart(2,'0')+'</div><div class="lbl">'+label+'</div></div>'}).join('')}
 function tick(){render('release',targets.release);render('preload',targets.preload)}tick();setInterval(tick,1000);
-const popularZones=['America/New_York','America/Chicago','America/Denver','America/Los_Angeles','America/Anchorage','America/Toronto','America/Winnipeg','America/Edmonton','America/Vancouver','America/Halifax','America/St_Johns','Australia/Perth','Australia/Adelaide','Australia/Sydney','Australia/Brisbane','Australia/Melbourne','Australia/Darwin'];
-const allZones=typeof Intl.supportedValuesOf==='function'?Intl.supportedValuesOf('timeZone'):popularZones;
+const popularZones=['America/New_York','America/Chicago','America/Denver','America/Los_Angeles','America/Anchorage','America/Toronto','America/Winnipeg','America/Edmonton','America/Vancouver','America/Halifax','America/St_Johns'];
+const allZones=(typeof Intl.supportedValuesOf==='function'?Intl.supportedValuesOf('timeZone'):popularZones).filter(z=>!z.startsWith('Australia/'));
 const zoneInput=document.getElementById('zoneSearch'),zoneOptions=document.getElementById('zoneOptions'),zoneGrid=document.getElementById('zoneGrid');
 allZones.forEach(z=>{const o=document.createElement('option');o.value=z.replace(/_/g,' ');o.label=z;zoneOptions.appendChild(o)});
 let selectedZones=[...popularZones];
